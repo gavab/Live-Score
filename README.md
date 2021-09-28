@@ -1,7 +1,7 @@
 # Live-Score
 >Prog2 project
 
-Források:https://api-sports.io/
+API:https://api-sports.io/
 ---
 
 Felhasználás
