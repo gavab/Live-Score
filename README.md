@@ -4,6 +4,10 @@
 API:https://api-sports.io/
 ---
 
+2021.10.03 UPDATE
+---
+Web app készítésének utána járása,megfelelő programozási nyelv kiválasztása
+
 Felhasználás
 ---
 
