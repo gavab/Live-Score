@@ -1,10 +1,10 @@
 # Live-Score
 >Prog2 project
 
-API:https://api-sports.io/
+API: https://api-sports.io/
 ---
 
-2021.10.03 UPDATE
+2021.10.03. UPDATE
 ---
 Web app készítésének utána járása,megfelelő programozási nyelv kiválasztása
 
