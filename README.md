@@ -4,7 +4,7 @@
 API: https://api-sports.io/
 ---
 
-2021.10.03. UPDATE
+2021.10.03-04. UPDATE
 ---
 Web app készítésének utána járása,megfelelő programozási nyelv kiválasztása
 A választott nyelv python
