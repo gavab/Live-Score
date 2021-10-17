@@ -88,7 +88,7 @@ function addMatchTile(data){
 	"method": "GET",
 	"headers":{
 		"x-rapidapi-host":"v3.football.api-sports.io",
-		"x-rapidapi-key":"e867d6bae65940063bb5037d1cd95063"
+		"x-rapidapi-key":""
 		}
 	})
 	.then(response=>response.json().then(data=>{
