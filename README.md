@@ -9,6 +9,7 @@ API: https://api-sports.io/
 Web app készítésének utána járása,megfelelő programozási nyelv kiválasztása
 A választott nyelv python
 Server csatlakozás tesztelése a test.py állományban
+Élő focimeccs eredmények követése a widgets.html állományon keresztül
 
 Felhasználás
 ---
