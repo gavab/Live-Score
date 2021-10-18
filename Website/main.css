@@ -55,10 +55,7 @@ nav{
 }
 
 
-.league img{
-   height: 100%;
-   width:100%;
-}
+
 
 .team{
     width: 100px;
@@ -69,13 +66,15 @@ nav{
 }
 
 .matches-table{
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
+    
     
 }
 
 .match-tile{
+    margin-top: 50px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -85,9 +84,15 @@ nav{
     align-items: center;
 }
 
+.match-tile .league {
+    width: 10%;
+    height: 10%;
+}
+
 .match-tile .league img{
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
+  
 }
 .match-tile p{
     font-size: 1.2rem;
