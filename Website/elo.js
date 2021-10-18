@@ -1,3 +1,4 @@
+//import { MY_API_KEY } from "./config";
 
 var elapsedTime=document.querySelector("#elapsed");
 var leaguesName=document.querySelector("#leagueName");
@@ -8,7 +9,6 @@ var awayTeamLogo=document.querySelector("#awayLogo");
 var awayTeamName=document.querySelector("#awayName");
 var lastMatchGoals=document.querySelector("#goals");
 var matchTable=document.querySelector("#matchTable");
-
 
 
 
@@ -82,13 +82,13 @@ function addMatchTile(data){
 }
 
 
-
+	
 
 	fetch("https://v3.football.api-sports.io/fixtures?live=all",{
 	"method": "GET",
 	"headers":{
 		"x-rapidapi-host":"v3.football.api-sports.io",
-		"x-rapidapi-key":"e867d6bae65940063bb5037d1cd95063"
+		"x-rapidapi-key":""
 		}
 	})
 	.then(response=>response.json().then(data=>{
@@ -100,17 +100,7 @@ function addMatchTile(data){
 		var goals=matchesList[0]['goals'];
 		var teams=matchesList[0]['teams'];
 
-		
-		leaguesName.innerHTML=league['name'];
-		leaguesLogo.src=league['logo'];
-		elapsedTime.innerHTML=fixture['status']['elapsed']+"'";
-		homeTeamLogo.src=teams['home']['logo'];
-		homeTeamName.innerHTML=teams['home']['name'];
-		awayTeamLogo.src=teams['away']['logo'];
-		awayTeamName.innerHTML=teams['away']['name'];
-		lastMatchGoals.innerHTML=goals['home']+" : "+goals['away'];
-
-		for(var i=1;i<matchesList.length;i++){
+		for(var i=0;i<matchesList.length;i++){
 			addMatchTile(matchesList[i]);
 		}
 
