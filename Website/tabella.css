@@ -8,36 +8,24 @@
 
 body{
     height: 100vh;
-    background-color: green;
+    background-color: burlywood;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 
-nav{
-    background-color: white;    
-    width:80%;
-    position: sticky;
-    margin: 20px auto;
-    z-index: 10;
+
+.title-box{
     display: flex;
-    align-items: center;
-    height: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-.nav-links ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: x-large;
+
+.league-table{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container{
@@ -51,29 +39,17 @@ nav{
     background-color: #fafafa;
     border-radius: 8px;
     text-transform: uppercase;
-    
-   
 }
-
-
-
 
 .team{
     width: 100px;
 }
 .team img{
-    height: 54px;
-    width: 54px;
+    height: 50%;
+    width: 50%;
 }
 
-.matches-table{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.match-tile{
+.league-tile{
     margin-top: 50px;
     position: relative;
     left: 50%;
@@ -84,22 +60,13 @@ nav{
     align-items: center;
    
 }
-.match-tile .league {
-    width: 10%;
-    height: 10%;
-}
-
-.match-tile .league img{
-    width: 50%;
-    height: 50%;
-  
-}
-.match-tile p{
+.league-tile p{
     font-size: 1.2rem;
 }
-.match-tile #goals{
-    font-size: 1.1rem;
+.league-tile .stats{
+    width: 15%;
+    height: 15%;
 }
-.match-tile .team{
+.league-tile .team{
     width: 100px;
 }
