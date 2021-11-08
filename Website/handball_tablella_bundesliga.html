@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Today's football matches</title>
+    <link rel="stylesheet" href="tabella_kezi.css">
+    <title>Kézilabda Bundesliga tabella</title>
 </head>
 <body>
     <div class="menu-bar">
@@ -135,31 +135,45 @@
        </ul>
    </div>
 
-
     <div class="container">
-        <h1>Today's football matches</h1>
-
-        <div class="title-box">
-            <div class="league">
-                <p id="leagueName"></p>
-            </div>   
-                <p id="elapsed"></p>
-            <div class=team>
-                <p id="homeName"></p>
-            </div>
-            <p id="goals"></p>
-            <div class="team">
-                <p id="awayName"></p>
-            </div>
+        <div class="league">
+            <h1 id="leagueName">League Name</h1>
         </div>
-
-        <div id="matchTable" class="matches-table">
+        <div class="season">
+            <p id="seasonYear">Year</p>
+        </div>
+        <div class="title-box">
+        <div class="rank">
+            <p id="rankNumber">Position</p>
+        </div>
+        <div class="teamT">
+            <p id="teamName">team name</p>
+        </div>
+        <div class="played">
+            <p id="playedNumber">Played</p>
+        </div>
+        <div class="win">
+            <p id="winNumber">Win num</p>
+        </div>
+        <div class="draw">
+            <p id="drawNumber">Draw num</p>
+        </div>
+        <div class="lose">
+            <p id="lossNumber">loss num</p>
         </div>
         
+        <div class="goals">
+            <p id="goalDifference">For - Against</p>
+        </div>
+        <div class="points">
+            <p id="point">Points</p>
+        </div>
+    </div>
+        <div id="leaguesTable" class="league-table">
+        </div>
     </div>
 
-    <script src="mai_foci.js" type="module"></script>
-
+    <script src="tabella_kezi_Bundesliga.js" type="module"></script>
 
 </body>
 </html>

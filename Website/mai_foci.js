@@ -50,7 +50,7 @@ function addMatchTile(data){
 
 
 	var elapsedTileTime=document.createElement('p');
-	elapsedTileTime.innerHTML=data['fixture']['status']['elapsed']+"'";
+	elapsedTileTime.innerHTML=data['fixture']['status']['long'];
 	
 
 	var leagues =document.createElement('div');
@@ -84,7 +84,7 @@ function addMatchTile(data){
 
 	
 
-	fetch("https://v3.football.api-sports.io/fixtures?live=all",{
+	fetch("https://v3.football.api-sports.io/fixtures?date=2021-11-07",{
 	"method": "GET",
 	"headers":{
 		"x-rapidapi-host":"v3.football.api-sports.io",

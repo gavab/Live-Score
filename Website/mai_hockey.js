@@ -46,11 +46,11 @@ function addMatchTile(data){
 	awayTeam.appendChild(awayTileName);
 
 	var score = document.createElement('p');
-	score.innerHTML=data['goals']['home']+" : "+data['goals']['away'];
+	score.innerHTML=data['scores']['home']+" : "+data['scores']['away'];
 
 
 	var elapsedTileTime=document.createElement('p');
-	elapsedTileTime.innerHTML=data['fixture']['status']['elapsed']+"'";
+	elapsedTileTime.innerHTML=data['status']['long'];
 	
 
 	var leagues =document.createElement('div');
@@ -84,10 +84,10 @@ function addMatchTile(data){
 
 	
 
-	fetch("https://v3.football.api-sports.io/fixtures?live=all",{
+	fetch("https://v1.hockey.api-sports.io/games?date=2021-11-07&timezone=Europe/budapest",{
 	"method": "GET",
 	"headers":{
-		"x-rapidapi-host":"v3.football.api-sports.io",
+		"x-rapidapi-host":"v1.hockey.api-sports.io",
 		"x-rapidapi-key":MY_API_KEY
 		}
 	})
