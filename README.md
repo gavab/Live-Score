@@ -23,8 +23,13 @@ Készülőben a kosárlabda oldal
 Élő foci eredmények és az aznapi eredmények követése
 Kosárlabda tabella készytése folyamatban előre meghatározottra már működik, egyénire készülőben, mint ahogy a foci tabella is
 
+2021.11.08 UPDATE
+---
+Foci,kosárlabda,kézilabda,jégkorong,baseball aznapi előtte-és utánnanapi eredmények folyamatban,
+Focinál TOP 5 bajnokság és a magyar tabella, kosárnál NBA,spanyol,magyar,euroleague, jégkorongnál NHL,magyar folyamatban
+Baseball MLB tabella folyamatban
 
 Felhasználás
 ---
 
-Labdarúgás,kosárlabda,baseball,formula-1,jégkorong sportok, eredményei,tabellák (még bővül)
+Labdarúgás,kosárlabda,baseball,jégkorong és kézilabda sportok, eredményei,tabellák (még bővül)
