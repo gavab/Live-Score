@@ -18,6 +18,12 @@ CSS stíluslap készítése (még alakulóban van), javascriptben lekérjük a l
 Menü pontok készítése későbbiekben kisebb képernyős médiatartalom forámzása
 Készülőben a kosárlabda oldal
 
+2021.10.25 UPDATE
+---
+Élő foci eredmények és az aznapi eredmények követése
+Kosárlabda tabella készytése folyamatban előre meghatározottra már működik, egyénire készülőben, mint ahogy a foci tabella is
+
+
 Felhasználás
 ---
 
