@@ -4,6 +4,17 @@
 API: https://api-sports.io/
 ---
 
+Betűstílus:Google Fonts: Righteous https://fonts.google.com/specimen/Righteous
+---
+
+Ikonok: CSS:https://www.bootstrapcdn.com/bootstrapicons/ , Lefele nyíl:https://icons.getbootstrap.com/icons/chevron-down/ , 
+Jobbra nyíl:https://icons.getbootstrap.com/icons/chevron-right/ , X:https://icons.getbootstrap.com/icons/x-lg/ , 
+Menu: https://icons.getbootstrap.com/icons/grid-3x3-gap/   
+---
+
+
+
+
 2021.10.03-04. UPDATE
 ---
 Web app készítésének utána járása,megfelelő programozási nyelv kiválasztása
@@ -25,11 +36,16 @@ Kosárlabda tabella készytése folyamatban előre meghatározottra már működ
 
 2021.11.08 UPDATE
 ---
-Foci,kosárlabda,kézilabda,jégkorong,baseball aznapi előtte-és utánnanapi eredmények folyamatban,
+Foci,kosárlabda,kézilabda,jégkorong,baseball aznapi eredmények folyamatban,
 Focinál TOP 5 bajnokság és a magyar tabella, kosárnál NBA,spanyol,magyar,euroleague, jégkorongnál NHL,magyar folyamatban
 Baseball MLB tabella folyamatban
+
+2021.11.21 UPDATE
+---
+Napi eredmények elkészültek az öt sportágra,mobil nézet és kis kijelzős nézet elkészült.
+
 
 Felhasználás
 ---
 
-Labdarúgás,kosárlabda,baseball,jégkorong és kézilabda sportok, eredményei,tabellák (még bővül)
+Labdarúgás,kosárlabda,baseball,jégkorong és kézilabda sportok, eredményei,tabellák 
