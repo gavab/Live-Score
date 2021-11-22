@@ -36,8 +36,7 @@ function addTableTile_WC(data){
 	
     //stats
 
-    var stats=document.createElement('div');
-    stats.classList.add("stats");
+    
 
     var gamesNum=document.createElement('p');
     var winNum=document.createElement('p');
@@ -49,18 +48,17 @@ function addTableTile_WC(data){
     lossNum.innerHTML=data['games']['lose']['total'];
     pNum.innerHTML=data['games']['win']['percentage'];
 
-    stats.appendChild(gamesNum);
-    stats.appendChild(winNum);
-    stats.appendChild(lossNum);
-    stats.appendChild(pNum);
-
-
+    
 
 	//attach
 
 	leagueTile.appendChild(teamRank);
 	leagueTile.appendChild(team);
-	leagueTile.appendChild(stats);
+	leagueTile.appendChild(gamesNum);
+    leagueTile.appendChild(winNum);
+    leagueTile.appendChild(lossNum);
+    leagueTile.appendChild(pNum);
+
 
     //create the full table
 
@@ -96,31 +94,30 @@ function addTableTile_EC(data){
 	
     //stats
 
-    var stats=document.createElement('div');
-    stats.classList.add("stats");
-
     var gamesNum=document.createElement('p');
-    var winNum=document.createElement('p');
-    var lossNum=document.createElement('p');
-    var pNum=document.createElement('p');
-    
     gamesNum.innerHTML=data['games']['played'];
+
+	var winNum=document.createElement('p');
     winNum.innerHTML=data['games']['win']['total'];
+
+	var lossNum=document.createElement('p');
     lossNum.innerHTML=data['games']['lose']['total'];
+	
+	var pNum=document.createElement('p');
     pNum.innerHTML=data['games']['win']['percentage'];
 
-    stats.appendChild(gamesNum);
-    stats.appendChild(winNum);
-    stats.appendChild(lossNum);
-    stats.appendChild(pNum);
-
+   
 
 
 	//attach
 
 	leagueTile.appendChild(teamRank);
 	leagueTile.appendChild(team);
-	leagueTile.appendChild(stats);
+	leagueTile.appendChild(gamesNum);
+    leagueTile.appendChild(winNum);
+    leagueTile.appendChild(lossNum);
+    leagueTile.appendChild(pNum);
+
 
     //create the full table
 

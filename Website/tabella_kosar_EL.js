@@ -34,8 +34,6 @@ function addTableTile(data){
 	
     //stats
 
-    var stats=document.createElement('div');
-    stats.classList.add("stats");
 
     var gamesNum=document.createElement('p');
     var winNum=document.createElement('p');
@@ -47,10 +45,7 @@ function addTableTile(data){
     lossNum.innerHTML=data['games']['lose']['total'];
     pNum.innerHTML=data['games']['win']['percentage'];
 
-    stats.appendChild(gamesNum);
-    stats.appendChild(winNum);
-    stats.appendChild(lossNum);
-    stats.appendChild(pNum);
+   
 
 
 
@@ -58,7 +53,11 @@ function addTableTile(data){
 
 	leagueTile.appendChild(teamRank);
 	leagueTile.appendChild(team);
-	leagueTile.appendChild(stats);
+	leagueTile.appendChild(gamesNum);
+    leagueTile.appendChild(winNum);
+    leagueTile.appendChild(lossNum);
+    leagueTile.appendChild(pNum);
+	
 
     //create the full table
 

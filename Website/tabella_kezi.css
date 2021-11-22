@@ -2,94 +2,158 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Righteous', cursive;
     text-align: center;
 }
 
 body{
-    height: 100vh;
-    background-color: lightblue;
+    min-height: 100vh;
+    background-color: orange;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 
-.menu-bar{
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
     background: black;
-    text-align: center;
-    position: relative;
     z-index: 1;
-    width: 100%;
+    
+    
 }
 
-.menu-bar ul{
-    display: inline-flex;
+nav .navbar{
+    max-width: 1250px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+nav .navbar .nav-links{
+    height: 100%;
+    line-height: 70px;
+    
+}
+
+nav .navbar .nav-links .links{
+    display: flex;
+    
+    
+}
+
+nav .navbar .nav-links .links li{
+   
+    position: relative;
+    display: flex;
     list-style: none;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+
+nav .navbar .nav-links .links li a{
+    height: 100%;
+    align-self: center;
     color: white;
-}
-
-.menu-bar ul li{
-    width: 100%;
-    margin: 15px;
-    padding: 15px;
-}
-
-.menu-bar ul li a{
     text-decoration: none;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav .navbar .nav-links .links li .arrow{
+    height: 100%;
+    width: 22px;
+    text-align: center;
     color: white;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.menu-bar ul li:hover{
-    background: grey;
-    border-radius: 3px;
+.navbar .nav-links .links li:hover .football-arrow,
+.navbar .nav-links .links li:hover .basketball-arrow,
+.navbar .nav-links .links li:hover .baseball-arrow,
+.navbar .nav-links .links li:hover .hockey-arrow,
+.navbar .nav-links .links li:hover .handball-arrow{
+    transform: rotate(180deg);
 }
 
-.sub-menu-1{
+.navbar .nav-links .links .sub-menu{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: black;
+    line-height: 40px;
+    border-radius: 0 0 5px 5px;
+}
+
+.navbar .nav-links .links .sub-menu li{
+    padding: 0 22px;
+    border-bottom: 1px solid red;
+    
+}
+
+.navbar .nav-links .links .sub-menu li .football-table-arrow,
+.navbar .nav-links .links .sub-menu li .basketball-table-arrow,
+.navbar .nav-links .links .sub-menu li .baseball-table-arrow,
+.navbar .nav-links .links .sub-menu li .hockey-table-arrow,
+.navbar .nav-links .links .sub-menu li .handball-table-arrow{
+    line-height: 40px;
+}
+
+.navbar .nav-links .links .sub-menu li a{
+    color: white;
+    font-size: 15px;
+    font: 500;
+}
+
+.sub-menu{
     display: none;
 }
 
-.menu-bar ul li:hover .sub-menu-1{
+.navbar .nav-links .links li:hover .football-sub-menu,
+.navbar .nav-links .links li:hover .basketball-sub-menu,
+.navbar .nav-links .links li:hover .baseball-sub-menu,
+.navbar .nav-links .links li:hover .hockey-sub-menu,
+.navbar .nav-links .links li:hover .handball-sub-menu{
     display: block;
-    position: absolute;
-    background: black;
-    margin-top: 15px;
-    margin-left: -15px;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul{
-    display: block;
-    margin: 10px;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul li{
-    width: 200px;
-    padding: 10px;
-    border-bottom: 1px solid white;
-    background: transparent;
-    border-radius: 0;
-    text-align: left;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
-    border-bottom: none;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
-    color: aqua;
 }
 
 .sub-menu-2{
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
     display: none;
 }
 
-.hover-me:hover .sub-menu-2{
-    position: absolute;
+.f-tables:hover .sub-menu-2,
+.basket-tables:hover .sub-menu-2,
+.base-tables:hover .sub-menu-2,
+.hockey-tables:hover .sub-menu-2,
+.handball-tables:hover .sub-menu-2{
     display: block;
-    margin-top: -40px;
-    margin-left: 140px;
-    background: black;
 }
+
+.navbar .bi-grid-3x3-gap,
+.nav-links .sidebar-logo .logo_name,
+.nav-links .sidebar-logo .bi-x-lg
+{
+       display: none; 
+}
+
 
 .league-table{
   
@@ -100,7 +164,7 @@ body{
 .container{
     position: absolute;
     padding: 1em;
-    margin: 0 auto;
+    margin: 100px auto;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -108,6 +172,7 @@ body{
     background-color: #fafafa;
     border-radius: 8px;
     text-transform: uppercase;
+    font-size: 16px;
 }
 
 .title-box {
@@ -125,15 +190,6 @@ body{
     
 }
 
-
-
-
-
-
-
-
-
-
 .league-tile{
     margin-top: 10vh;
     margin-bottom: 10vh;
@@ -148,7 +204,7 @@ body{
    
 }
 .league-tile p{
-    font-size: 1.2rem;
+    font-size: 16px;
 }
 
 .league-tile .rank{
@@ -176,11 +232,169 @@ body{
     width: 100%;
 }
 
-@media (max-width: 720px) {
+@media  (max-width: 954px){
+    nav .navbar{
+        max-width: 100%;
+        padding: 0 25px;
+    }
+
+    nav .navbar .nav-links .links li{
+        padding: 0 10px;
+    }
+
+    nav .navbar .nav-links .links li a{
+        font-size: 15px;
+    }
+
+    .league-tile p{
+        font-size: 15px;
+    }
     
     .container{
+        font-size: 15px;
+    }
+}
+
+@media  (max-width: 800px){
+    nav .navbar .nav-links{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        max-width: 270px;
+        width: 100%;
+        background: black;
+        padding: 20px;
+        line-height: 40px;
+        transition: all 0.5s ease;
+    }
+
+    nav .navbar .nav-links .sidebar-logo{
         display: flex;
-        flex-direction: column;
-        font-size: 1.5vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+    .nav-links .sidebar-logo{
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    
+    .navbar .bi-grid-3x3-gap,
+    .nav-links .sidebar-logo .logo_name,
+    .nav-links .sidebar-logo .bi-x-lg{
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .navbar .bi-grid-3x3-gap,
+    .nav-links .sidebar-logo .logo_name,
+    .nav-links .sidebar-logo .bi-x-lg{
+       display: block;
+    }
+
+    nav .navbar .nav-links .links{
+        display: block;
+        margin-top: 20px;
+    }
+
+    nav .navbar .nav-links .links li{
+        display: block;
+        
+    }
+
+    .navbar .nav-links .links .sub-menu{
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    nav .navbar .nav-links .links li{
+        border-bottom: none;
+    }
+    .navbar .nav-links .links li:hover .football-sub-menu,
+    .navbar .nav-links .links li:hover .basketball-sub-menu,
+    .navbar .nav-links .links li:hover .baseball-sub-menu,
+    .navbar .nav-links .links li:hover .hockey-sub-menu,
+    .navbar .nav-links .links li:hover .handball-sub-menu{
+        display: none;
+    }
+
+    .navbar .nav-links .links .sub-menu-2{ 
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+       
+    }
+    .navbar .nav-links .links .sub-menu-2 li{
+        border-bottom: none;
+    }
+
+    nav .navbar .nav-links .links li .arrow{
+        line-height: 40px;
+    }
+
+    .navbar .nav-links .links li:hover .football-arrow,
+    .navbar .nav-links .links li:hover .basketball-arrow,
+    .navbar .nav-links .links li:hover .baseball-arrow,
+    .navbar .nav-links .links li:hover .hockey-arrow,
+    .navbar .nav-links .links li:hover .handball-arrow{
+        transform: rotate(0deg);
+    }
+
+    .navbar .nav-links.show1 .links .sub-menu.football-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show2 .links .sub-menu.basketball-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show3 .links .sub-menu.baseball-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show4 .links .sub-menu.hockey-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show5 .links .sub-menu.handball-sub-menu{
+        display: block;
+    }
+
+
+    .navbar .nav-links.show6 .links .f-tables .football-tables-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show7 .links .basket-tables .basketball-tables-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show8 .links .base-tables .baseball-tables-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show9 .links .hockey-tables .hockey-tables-sub-menu{
+        display: block;
+    }
+
+    .navbar .nav-links.show10 .links .handball-tables .handball-tables-sub-menu{
+        display: block;
+    }
+
+    .league-tile p{
+        font-size: 10px;
+    }
+
+    .container{
+        font-size: 10px;
     }
 }

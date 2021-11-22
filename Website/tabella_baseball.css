@@ -8,7 +8,7 @@
 
 body{
     min-height: 100vh;
-    background-color: green;
+    background-color: lightgreen;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,15 +24,19 @@ nav{
     background: black;
     z-index: 1;
     
+    
 }
 
 nav .navbar{
     max-width: 1250px;
     height: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
+    text-align: center;
     z-index: 1;
     justify-content: center;
+    padding: 0 50px;
 }
 
 nav .navbar .nav-links{
@@ -150,6 +154,7 @@ nav .navbar .nav-links .links li .arrow{
        display: none; 
 }
 
+
 .league-table{
   
     display: flex;
@@ -159,7 +164,7 @@ nav .navbar .nav-links .links li .arrow{
 .container{
     position: absolute;
     padding: 1em;
-    margin: 100px auto;
+    margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -185,7 +190,6 @@ nav .navbar .nav-links .links li .arrow{
     
 }
 
-
 .league-tile{
     margin-top: 10vh;
     margin-bottom: 10vh;
@@ -204,7 +208,7 @@ nav .navbar .nav-links .links li .arrow{
 }
 
 .league-tile .rank{
-    font-size: 16px;
+    padding: 1em;
 }
 
 .league-tile .stats{
@@ -242,14 +246,10 @@ nav .navbar .nav-links .links li .arrow{
         font-size: 15px;
     }
 
-    .league-tile p{
-        font-size: 15px;
-    }
-    .league-tile .rank{
-        font-size: 15px;
-    }
-
     .container{
+        font-size: 15px;
+    }
+    .league-tile p{
         font-size: 15px;
     }
 }
@@ -283,7 +283,6 @@ nav .navbar .nav-links .links li .arrow{
     }
 
     
-
     .navbar .bi-grid-3x3-gap,
     .nav-links .sidebar-logo .logo_name,
     .nav-links .sidebar-logo .bi-x-lg{
@@ -390,14 +389,10 @@ nav .navbar .nav-links .links li .arrow{
         display: block;
     }
 
-    .league-tile p{
-        font-size: 10px;
-    }
-    
-    .league-tile .rank{
-        font-size: 10px;
-    }
     .container{
+        font-size: 10px;
+    }
+    .league-tile p{
         font-size: 10px;
     }
 }

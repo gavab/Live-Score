@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main_basketball.css">
+    <link rel="stylesheet" href="tabella_kosar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
-    <title>Today's basketball matches</title>
+    <title>Kosárlabda Euroleague Tabella</title>
 </head>
 <body>
     <nav>
@@ -123,30 +123,39 @@
     </nav>
 
     <div class="container">
-        <h1>Eredmények</h1>
+
+        <div class="league">
+            <h1 id="leagueName">League Name</h1>
+        </div>
 
         <div class="title-box">
-            <div class="league">
-                <p id="leagueName"></p>
-            </div>   
-                <p id="elapsed"></p>
-            <div class=team>
-                <p id="homeName"></p>
+            <div class="rank">
+                <p id="rankNumber">Position</p>
             </div>
-            <p id="goals"></p>
-            <div class="team">
-                <p id="awayName"></p>
+            <div class="teamT">
+                <p id="teamName">Team name</p>
+            </div>
+            <div class="played">
+                <p id="playedNumber">Played</p>
+            </div>
+            <div class="win">
+                <p id="winNumber">Win</p>
+            </div>
+            <div class="lose">
+                <p id="lossNumber">Lose</p>
+            </div>
+            <div class="percentage">
+                <p id="percentageNum">Percenatage</p>
             </div>
         </div>
 
-        <div id="matchTable" class="matches-table">
+        <div id="leaguesTable" class="league-table">
+            <p id="groupName1"></p>
         </div>
-        
     </div>
 
-    <script src="mai_kosar.js" type="module"></script>
+    <script src="tabella_kosar_EL.js" type="module"></script>
     <script src="script.js"></script>
-
 
 </body>
 </html>

@@ -4,16 +4,18 @@
     outline: 0;
     font-family: 'Righteous', cursive;
     text-align: center;
+    box-sizing: border-box;
 }
 
 body{
-    min-height: 100vh;
-    background-color: green;
+    height: 100vh;
+    background-color: lightblue;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
+
 
 nav{
     position: fixed;
@@ -24,15 +26,19 @@ nav{
     background: black;
     z-index: 1;
     
+    
 }
 
 nav .navbar{
     max-width: 1250px;
     height: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
+    text-align: center;
     z-index: 1;
     justify-content: center;
+    padding: 0 50px;
 }
 
 nav .navbar .nav-links{
@@ -150,16 +156,11 @@ nav .navbar .nav-links .links li .arrow{
        display: none; 
 }
 
-.league-table{
-  
-    display: flex;
-    flex-direction: column;
-}
-
 .container{
-    position: absolute;
-    padding: 1em;
-    margin: 100px auto;
+    
+    position: relative;
+    padding: 10px;
+    margin: 100px 0;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -170,63 +171,49 @@ nav .navbar .nav-links .links li .arrow{
     font-size: 16px;
 }
 
-.title-box {
-    
-    position: relative;
-   
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-   
-    
+.team img{
+    height: 75%;
+    width: 75%;
 }
 
+.matches-table{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 
-.league-tile{
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+}
+
+.match-tile{
+    margin-top: 50px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    
    
 }
-.league-tile p{
-    font-size: 16px;
-}
-
-.league-tile .rank{
-    font-size: 16px;
-}
-
-.league-tile .stats{
-    
-    display: flex;
-    flex-direction: row;
-    
-}
-
-/*.league-tile .stats p{
-    padding: 10%;
-}*/
-.league-tile .team {
-    
-    height: 10%;
+.match-tile .league {
     width: 10%;
-    
+    height: 10%;
 }
-.league-tile .team img{
-    height: 100%;
-    width: 100%;
+
+.match-tile .league img{
+    width: 50%;
+    height: 50%;
+  
 }
+.match-tile p{
+    font-size: 16px;
+}
+.match-tile #goals{
+    font-size: 16px;
+}
+.match-tile .team{
+    width: 100px;
+}
+
 
 @media  (max-width: 954px){
     nav .navbar{
@@ -242,13 +229,12 @@ nav .navbar .nav-links .links li .arrow{
         font-size: 15px;
     }
 
-    .league-tile p{
+    .match-tile p{
         font-size: 15px;
     }
-    .league-tile .rank{
+    .match-tile #goals{
         font-size: 15px;
     }
-
     .container{
         font-size: 15px;
     }
@@ -283,7 +269,6 @@ nav .navbar .nav-links .links li .arrow{
     }
 
     
-
     .navbar .bi-grid-3x3-gap,
     .nav-links .sidebar-logo .logo_name,
     .nav-links .sidebar-logo .bi-x-lg{
@@ -390,11 +375,10 @@ nav .navbar .nav-links .links li .arrow{
         display: block;
     }
 
-    .league-tile p{
+    .match-tile p{
         font-size: 10px;
     }
-    
-    .league-tile .rank{
+    .match-tile #goals{
         font-size: 10px;
     }
     .container{

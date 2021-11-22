@@ -81,10 +81,17 @@ function addMatchTile(data){
 
 }
 
+	const d=new Date();
+	const year=d.getFullYear();
+	const mouth=d.getMonth();
+	const day=d.getDate();
+	
+	var months=["01","02","03","04","05","06","07","08","09","10","11","12"];
+	var	user_month=months[mouth];
 
 	
 
-	fetch("https://v1.baseball.api-sports.io/games?date=2021-11-07&timezone=Europe/budapest",{
+	fetch(`https://v1.baseball.api-sports.io/games?date=${year}-${user_month}-${day}&timezone=Europe/budapest`,{
 	"method": "GET",
 	"headers":{
 		"x-rapidapi-host":"v1.baseball.api-sports.io",

@@ -80,11 +80,17 @@ function addMatchTile(data){
 	matchTable.appendChild(matchTile);
 
 }
+	const d=new Date();
+	const year=d.getFullYear();
+	const month=d.getMonth();
+	const day=d.getDate();
 
+	var months=["01","02","03","04","05","06","07","08","09","10","11","12"];
+	var	user_month=months[month];
 
 	
 
-	fetch("https://v1.basketball.api-sports.io/games?date=2021-11-07&timezone=Europe/budapest",{
+	fetch(`https://v1.basketball.api-sports.io/games?date=${year}-${user_month}-${day}`,{
 	"method": "GET",
 	"headers":{
 		"x-rapidapi-host":"v1.basketball.api-sports.io",
