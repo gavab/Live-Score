@@ -7,8 +7,10 @@ API: https://api-sports.io/
 Betűstílus:Google Fonts: Righteous https://fonts.google.com/specimen/Righteous
 ---
 
-Ikonok: CSS:https://www.bootstrapcdn.com/bootstrapicons/ , Lefele nyíl:https://icons.getbootstrap.com/icons/chevron-down/ , 
-Jobbra nyíl:https://icons.getbootstrap.com/icons/chevron-right/ , X:https://icons.getbootstrap.com/icons/x-lg/ , 
+Ikonok: CSS:https://www.bootstrapcdn.com/bootstrapicons/ , 
+Lefele nyíl:https://icons.getbootstrap.com/icons/chevron-down/ , 
+Jobbra nyíl:https://icons.getbootstrap.com/icons/chevron-right/ , 
+X:https://icons.getbootstrap.com/icons/x-lg/ , 
 Menu: https://icons.getbootstrap.com/icons/grid-3x3-gap/   
 ---
 
