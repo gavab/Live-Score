@@ -2,7 +2,7 @@ import { MY_API_KEY } from "./config.js";
 
 var leagueName=document.querySelector("#leagueName");
 var TeamName=document.querySelector("#teamName");
-var rankNum=document.querySelector("#rankNumber");
+var seasonYear=document.querySelector("#seasonYear");
 var leaguesTable_WC=document.querySelector("#leaguesTable_WC");
 var leaguesTable_EC=document.querySelector("#leaguesTable_EC");
 var groupName_1=document.querySelector("#groupName1");
@@ -37,8 +37,7 @@ function addTableTile_WC(data){
 	
     //stats
 
-    var stats=document.createElement('div');
-    stats.classList.add("stats");
+    
 
     var gamesNum=document.createElement('p');
     var winNum=document.createElement('p');
@@ -50,18 +49,17 @@ function addTableTile_WC(data){
     lossNum.innerHTML=data['games']['lose']['total'];
     pNum.innerHTML=data['games']['win']['percentage'];
 
-    stats.appendChild(gamesNum);
-    stats.appendChild(winNum);
-    stats.appendChild(lossNum);
-    stats.appendChild(pNum);
-
-
+    
 
 	//attach
 
 	leagueTile.appendChild(teamRank);
 	leagueTile.appendChild(team);
-	leagueTile.appendChild(stats);
+	leagueTile.appendChild(gamesNum);
+    leagueTile.appendChild(winNum);
+    leagueTile.appendChild(lossNum);
+    leagueTile.appendChild(pNum);
+
 
     //create the full table
 
@@ -97,31 +95,30 @@ function addTableTile_EC(data){
 	
     //stats
 
-    var stats=document.createElement('div');
-    stats.classList.add("stats");
-
     var gamesNum=document.createElement('p');
-    var winNum=document.createElement('p');
-    var lossNum=document.createElement('p');
-    var pNum=document.createElement('p');
-    
     gamesNum.innerHTML=data['games']['played'];
+
+	var winNum=document.createElement('p');
     winNum.innerHTML=data['games']['win']['total'];
+
+	var lossNum=document.createElement('p');
     lossNum.innerHTML=data['games']['lose']['total'];
+	
+	var pNum=document.createElement('p');
     pNum.innerHTML=data['games']['win']['percentage'];
 
-    stats.appendChild(gamesNum);
-    stats.appendChild(winNum);
-    stats.appendChild(lossNum);
-    stats.appendChild(pNum);
-
+   
 
 
 	//attach
 
 	leagueTile.appendChild(teamRank);
 	leagueTile.appendChild(team);
-	leagueTile.appendChild(stats);
+	leagueTile.appendChild(gamesNum);
+    leagueTile.appendChild(winNum);
+    leagueTile.appendChild(lossNum);
+    leagueTile.appendChild(pNum);
+
 
     //create the full table
 
@@ -130,7 +127,7 @@ function addTableTile_EC(data){
 }
 	
 
-	fetch("https://v1.basketball.api-sports.io/standings?league=1&season=2021",{
+	fetch(`https://v1.baseball.api-sports.io/standings?league=1&season=2021`,{
 	"method": "GET",
 	"headers":{
 		"x-rapidapi-host":"v1.baseball.api-sports.io",
@@ -139,22 +136,18 @@ function addTableTile_EC(data){
 	})
 	.then(response=>response.json().then(data=>{
 
+
 		var tablesList=data['response'][0];
 
-		
-        
-		
-		var team=tablesList[0]['team'];
-
-        rankNum.innerHTML=rank;
-        TeamName.innerHTML=team['name'];
-
-		/*var groupFirst=tablesList[15]['group'];
+		var team=tablesList[0]['team']['name'];
+		var seasonY=tablesList[0]['league']['season'];
+		var stage=tablesList[0]['stage'];
+		var groupFirst=tablesList[15]['group'];
 		var groupSecond=tablesList[1]['group'];
-
+		
         
-       
-
+		leagueName.innerHTML=stage;
+		seasonYear.innerHTML=seasonY;
 
 		groupName_1.innerHTML=groupSecond['name'];
 		for(var i=0;i<15;i++){
@@ -167,7 +160,7 @@ function addTableTile_EC(data){
 		for(var i=15;i<30;i++)
 		{
 			addTableTile_EC(tablesList[i]);
-		}*/
+		}
 
 	}))
 	.catch(err=>{

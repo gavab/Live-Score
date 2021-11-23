@@ -1,6 +1,7 @@
 import { MY_API_KEY } from "./config.js";
 
 var leagueName=document.querySelector("#leagueName");
+var seasonYear=document.querySelector("#seasonYear");
 var TeamName=document.querySelector("#teamName");
 var leaguesTable_WC=document.querySelector("#leaguesTable_WC");
 var leaguesTable_EC=document.querySelector("#leaguesTable_EC");
@@ -138,13 +139,14 @@ function addTableTile_EC(data){
 		var tablesList=data['response'][0];
 
 		var stage=tablesList[0]['stage'];
+		var seasonY=tablesList[0]['league']['season'];
 		var rank=tablesList[0]['position'];
 		var team=tablesList[0]['team'];
 		var groupFirst=tablesList[15]['group'];
 		var groupSecond=tablesList[1]['group'];
 
         leagueName.innerHTML=stage;
-       
+        seasonYear.innerHTML=seasonY;
 
 
 		groupName_1.innerHTML=groupSecond['name'];

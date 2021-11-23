@@ -164,7 +164,7 @@ nav .navbar .nav-links .links li .arrow{
 .container{
     position: absolute;
     padding: 1em;
-    margin: 0 auto;
+    margin: 100px auto;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
