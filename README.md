@@ -50,6 +50,9 @@ Baseball MLB tabella folyamatban
 ---
 Napi eredmények elkészültek az öt sportágra,mobil nézet és kis kijelzős nézet elkészült.
 
+2021.11.23 FINAL updates
+---
+A baseball tabella is elkészült,ezzel teljesen elkészült a webapp.
 
 Felhasználás
 ---
